@@ -15,7 +15,7 @@ public class CashbackDecorator extends PaymentDecorator {
     @Override
     public OrderReceipt pay(double amount) {
         double cashback = amount * percent;
-        System.out.printf("Cashback +%.0f%% → points: %.2f%n", percent * 100, cashback);
+        System.out.printf("Cashback +%.0f%% - points: %.2f%n", percent * 100, cashback);
         OrderReceipt base = delegate.pay(amount);
         return new OrderReceipt(base.totalBefore(), base.totalCharged(), base.notes() + " Cashback " + (int)(percent*100) + "%");
     }

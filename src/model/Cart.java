@@ -28,7 +28,7 @@ public class Cart{
         for (Product p : products) {
             sb.append("- ").append(p.toString()).append("\n");
         }
-        sb.append(String.format("Total: $%.2f", getTotal()));
+        sb.append(String.format("Total: ₸%.2f", getTotal()));
         return sb.toString();
     }
 }
