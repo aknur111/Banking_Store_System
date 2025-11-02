@@ -9,6 +9,7 @@ public class CreditCardPayment implements Payment {
         this.secureCardNumber = secureCardNumber;
     }
 
+
     @Override
     public OrderReceipt pay(double amount) {
         System.out.printf("CreditCard Charging %.2f via %s%n", amount, secureCardNumber);
